@@ -12,20 +12,20 @@ import org.springframework.web.bind.annotation._
 @RestController
 class CarController {
   @Autowired
-  var userRepository: CarRepository = _
+  var carRepository: CarRepository = _
 
-  @RequestMapping(path = Array("/{userId}"))
-  def getUser(@PathVariable("userId") userId: String): Car = {
-    userRepository.findOne(userId)
+  @RequestMapping(path = Array("/{carId}"))
+  def getUser(@PathVariable("carId") carId: String): Car = {
+    carRepository.findOne(carId)
   }
 
   @RequestMapping(path = Array("/"))
   def getUsersByPage(@RequestParam("page") page: Int = 0): Page[Car] = {
-    userRepository.findAll(new PageRequest(page, 20))
+    carRepository.findAll(new PageRequest(page, 20))
   }
 
   @RequestMapping(path = Array("/"), method = Array(RequestMethod.POST))
   def saveUser(@RequestBody user: Car): Car = {
-    userRepository.save(user)
+    carRepository.save(user)
   }
 }
