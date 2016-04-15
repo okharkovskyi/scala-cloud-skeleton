@@ -3,7 +3,7 @@ package com.example
 import org.specs2.mutable.SpecificationWithJUnit
 import org.specs2.specification.Scope
 
-class MainTest extends SpecificationWithJUnit {
+class CarServiceAppTest extends SpecificationWithJUnit {
 
   trait Context extends Scope
 

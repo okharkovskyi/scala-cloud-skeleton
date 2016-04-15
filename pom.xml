@@ -17,5 +17,6 @@
     </developers>
     <modules>
         <module>user-service</module>
+        <module>car-service</module>
     </modules>
 </project>
