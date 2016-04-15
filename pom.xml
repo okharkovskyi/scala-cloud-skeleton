@@ -18,5 +18,6 @@
     <modules>
         <module>user-service</module>
         <module>car-service</module>
+        <module>booking-service</module>
     </modules>
 </project>
