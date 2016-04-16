@@ -2,6 +2,7 @@ package com.example.cloud.controller
 
 import javax.websocket.server.PathParam
 
+import com.example.cloud.Logging
 import com.example.cloud.model.Car
 import com.example.cloud.repository.CarRepository
 import org.springframework.beans.factory.annotation.Autowired
@@ -12,7 +13,7 @@ import scala.collection.JavaConversions._
 
 @RequestMapping(path = Array("/car"))
 @RestController
-class CarController {
+class CarController extends Logging {
   @Autowired
   var carRepository: CarRepository = _
 
@@ -28,6 +29,7 @@ class CarController {
 
   @RequestMapping(path = Array("/"))
   def getAllCars(): Seq[Car] = {
+    log.info("CarController.getAllCars")
     carRepository.findAll()
   }
 
