@@ -4,25 +4,23 @@ import com.example.cloud.Logging
 import com.example.cloud.model.BookedCar
 import com.example.cloud.remote.{Car, RemoteCarService}
 import com.example.cloud.repository.BookedCarRepository
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 import scala.collection.JavaConversions._
+import scala.util.Try
 
 @Service
 class CarService extends Logging {
-
-
   @Autowired
   var bookedCarRepository: BookedCarRepository = _
   @Autowired
   var remoteCarService: RemoteCarService = _
 
-  @HystrixCommand(fallbackMethod = "defaultCarsResponse")
-  def getAllCars(): List[Car] = {
-    remoteCarService.getAllCars().filterNot(car => getBookedCarIds.contains(car.id))
-
+  def getAvailableCars(): Try[List[Car]] = {
+    Try {
+      remoteCarService.getAllCars().filterNot(car => getBookedCarIds.contains(car.id))
+    }
   }
 
   def getBookedCarIds: Seq[String] = {

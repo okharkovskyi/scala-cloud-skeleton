@@ -22,7 +22,7 @@ class BookedCarController {
 
   @RequestMapping(path = Array("/availableCars"))
   def getAvailableCars(): Seq[Car] = {
-    carService.getAllCars
+    carService.getAvailableCars.getOrElse(Seq())
   }
 
   @RequestMapping(path = Array("/bookCar"), method = Array(RequestMethod.POST))
