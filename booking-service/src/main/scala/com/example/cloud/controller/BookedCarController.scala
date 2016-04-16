@@ -25,8 +25,13 @@ class BookedCarController {
     carService.getAvailableCars.getOrElse(Seq())
   }
 
-  @RequestMapping(path = Array("/bookCar"), method = Array(RequestMethod.POST))
-  def bookCar(@RequestBody bookedCar: BookedCar): BookedCar = {
-    carService.bookCar(bookedCar)
+  @RequestMapping(path = Array("/bookCar"), method = Array(RequestMethod.GET))
+  def bookCar(@RequestParam("userId") userId: String, @RequestParam("carId") carId: String): BookedCar = {
+    carService.bookCar(userId, carId)
+  }
+
+  @RequestMapping(path = Array("/returnCar"), method = Array(RequestMethod.GET))
+  def returnCar(@RequestParam("carId") carId:String) = {
+    carService.returnCar(carId)
   }
 }

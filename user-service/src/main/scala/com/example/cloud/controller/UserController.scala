@@ -1,7 +1,5 @@
 package com.example.cloud.controller
 
-import java.util.{List => JList}
-
 import com.example.cloud.model.User
 import com.example.cloud.repository.UserRepository
 import org.springframework.beans.factory.annotation.Autowired

@@ -1,12 +1,9 @@
 package com.example.cloud.controller
 
-import javax.websocket.server.PathParam
-
 import com.example.cloud.Logging
 import com.example.cloud.model.Car
 import com.example.cloud.repository.CarRepository
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.data.domain.{Page, PageRequest}
 import org.springframework.web.bind.annotation._
 
 import scala.collection.JavaConversions._
@@ -20,11 +17,6 @@ class CarController extends Logging {
   @RequestMapping(path = Array("/{carId}"))
   def getCar(@PathVariable("carId") carId: String): Car = {
     carRepository.findOne(carId)
-  }
-
-  @RequestMapping(path = Array("/{page}"))
-  def getCarsByPage(@PathParam("page") page: Int): Page[Car] = {
-    carRepository.findAll(new PageRequest(page, 20))
   }
 
   @RequestMapping(path = Array("/"))
