@@ -1,0 +1,6 @@
+{
+	"_id": "0c957061-2667-49a6-b610-6e9fc56b09f8",
+	"_class": "com.example.cloud.model.User",
+	"username": "username",
+	"email": "email@google.com"
+}

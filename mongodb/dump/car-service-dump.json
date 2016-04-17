@@ -1,0 +1,35 @@
+{
+	"_id": "ebe43711-b508-45c9-a8f8-7c9bc385da93",
+	"_class": "com.example.cloud.model.Car",
+	"model": "Honda Civic",
+	"year": 2009,
+	"price": 52
+}
+{
+	"_id": "9bb8fa06-cb69-497f-84c1-2df602339bbc",
+	"_class": "com.example.cloud.model.Car",
+	"model": "Mazda 6",
+	"year": 2003,
+	"price": 47
+}
+{
+	"_id": "4a068fd9-608c-4365-aba4-cbfef3e8964a",
+	"_class": "com.example.cloud.model.Car",
+	"model": "Toyota Corolla",
+	"year": 2006,
+	"price": 47
+}
+{
+	"_id": "8320710a-0165-493e-a1f4-5f4aa10b8cd1",
+	"_class": "com.example.cloud.model.Car",
+	"model": "Honda Accord",
+	"year": 2015,
+	"price": 50
+}
+{
+	"_id": "344585c8-81b1-4c2a-897e-c3736a6de58b",
+	"_class": "com.example.cloud.model.Car",
+	"model": "BMW X5",
+	"year": 2003,
+	"price": 57
+}
