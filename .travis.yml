@@ -1,4 +1,15 @@
-sudo: false
+sudo: required
 language: java
 jdk: oraclejdk8
+
+
+services:
+  - docker
+
 script: mvn clean verify
+
+# MONGO DB
+#  - export MONGO_DB=scala-cloud-skeleton/mongodb
+#  - docker build -t $MONGO_DB:$COMMIT ./mongodb
+#  - docker tag $MONGO_DB:$COMMIT $MONGO_DB:$TAG
+#  - docker push $MONGO_DB
