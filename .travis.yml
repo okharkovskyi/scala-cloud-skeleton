@@ -8,6 +8,9 @@ services:
 
 script: mvn clean verify
 
+
+#docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+
 # MONGO DB
 #  - export MONGO_DB=scala-cloud-skeleton/mongodb
 #  - docker build -t $MONGO_DB:$COMMIT ./mongodb
