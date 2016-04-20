@@ -1,7 +1,35 @@
 discovery:
+  container_name: consul_discovery
   image: progrium/consul
   command: -server -bootstrap
   ports:
     - 8400:8400
     - 8500:8500
     - 8600:8600
+
+mongodb:
+  container_name: mongodb
+  build: ./mongodb
+  ports:
+    - 27017:27017
+
+user-service:
+  container_name: user-service
+  build: ./user-service
+  links:
+    - mongodb
+    - discovery
+
+car-service:
+  container_name: car-service
+  build: ./car-service
+  links:
+    - mongodb
+    - discovery
+
+booking-service:
+  container_name: booking-service
+  build: ./booking-service
+  links:
+    - mongodb
+    - discovery

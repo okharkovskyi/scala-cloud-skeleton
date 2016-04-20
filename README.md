@@ -4,3 +4,8 @@
 Requires:
 - Consul(https://www.consul.io/)
 - MongoDB
+
+
+To Start System with Docker:
+- docker-compose build
+- docker-compose up
