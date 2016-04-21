@@ -5,3 +5,4 @@ ADD ./target/car-service-1.0.0-SNAPSHOT.jar /app/
 CMD ["java", "-jar", "/app/car-service-1.0.0-SNAPSHOT.jar"]
 
 #EXPOSE 8989 2000
+EXPOSE 3000
