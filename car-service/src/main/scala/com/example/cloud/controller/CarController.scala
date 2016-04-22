@@ -5,7 +5,6 @@ import com.example.cloud.model.Car
 import com.example.cloud.repository.CarRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation._
-
 import scala.collection.JavaConversions._
 
 @RequestMapping(path = Array("/car"))
@@ -26,7 +25,7 @@ class CarController extends Logging {
   }
 
   @RequestMapping(path = Array("/"), method = Array(RequestMethod.POST))
-  def saveCar(@RequestBody user: Car): Car = {
+  def saveCar(@RequestBody user: Car): Unit = {
     carRepository.save(user)
   }
 }

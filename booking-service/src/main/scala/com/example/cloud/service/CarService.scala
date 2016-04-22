@@ -19,7 +19,7 @@ class CarService extends Logging {
   @Autowired
   var remoteUserService: RemoteUserService = _
 
-  def getAvailableCars(): Try[List[Car]] = {
+  def getAvailableCars(): Try[Seq[Car]] = {
     Try {
       remoteCarService.getAllCars().filterNot(car => getBookedCarIds.contains(car.id))
     }

@@ -10,7 +10,7 @@ trait RemoteCarService {
     method = Array(RequestMethod.GET),
     value = Array("/car/"),
     consumes = Array(MediaType.APPLICATION_JSON_UTF8_VALUE))
-  def getAllCars(): List[Car]
+  def getAllCars(): Seq[Car]
 
   @RequestMapping(
     method = Array(RequestMethod.GET),

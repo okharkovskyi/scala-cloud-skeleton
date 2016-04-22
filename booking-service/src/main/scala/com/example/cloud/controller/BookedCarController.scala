@@ -31,7 +31,7 @@ class BookedCarController {
   }
 
   @RequestMapping(path = Array("/returnCar"), method = Array(RequestMethod.GET))
-  def returnCar(@RequestParam("carId") carId:String) = {
+  def returnCar(@RequestParam("carId") carId: String): Unit = {
     carService.returnCar(carId)
   }
 }
