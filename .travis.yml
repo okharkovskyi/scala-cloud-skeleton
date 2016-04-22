@@ -1,13 +1,14 @@
 sudo: required
 language: java
 jdk: oraclejdk8
-
+install: pip install codecov
 
 services:
   - docker
 
 script: mvn clean verify
 
+after_success: codecov
 
 #docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 
