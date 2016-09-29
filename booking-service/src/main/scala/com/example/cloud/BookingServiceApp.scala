@@ -1,5 +1,6 @@
 package com.example.cloud
 
+import com.example.cloud.logging.Logging
 import org.springframework.boot.SpringApplication
 
 object BookingServiceApp extends App with Logging {

@@ -1,4 +1,4 @@
-package com.example.cloud
+package com.example.cloud.logging
 
 import org.slf4j.LoggerFactory
 

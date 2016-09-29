@@ -16,6 +16,7 @@
         </developer>
     </developers>
     <modules>
+        <module>core</module>
         <module>user-service</module>
         <module>car-service</module>
         <module>booking-service</module>

@@ -1,6 +1,6 @@
 package com.example.cloud.service
 
-import com.example.cloud.Logging
+import com.example.cloud.logging.Logging
 import com.example.cloud.model.BookedCar
 import com.example.cloud.remote.{Car, RemoteCarService, RemoteUserService}
 import com.example.cloud.repository.BookedCarRepository
